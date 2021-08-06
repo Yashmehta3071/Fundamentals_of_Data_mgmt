@@ -1,0 +1,3 @@
+db.restaurant.find({'grades':{$elemMatch:{'score':{$gt:50}}}});
+db.restaurant.find({},{'cuisine':1,'name':1,_id:0});
+simmilar to db.runCommand({count: ‘restaurants’})

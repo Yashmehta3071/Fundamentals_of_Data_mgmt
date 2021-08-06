@@ -1,0 +1,60 @@
+CREATE TABLE Manager (
+	mgr_id INT UNSIGNED NOT NULL,
+    emp_fname VARCHAR(50) NOT NULL,
+    emp_lname VARCHAR(50) NOT NULL,
+    emp_bdate DATE NOT NULL,
+    emp_address TINYTEXT NOT NULL,
+    gender VARCHAR(1) CHECK (gender = 'M' OR gender = 'F' OR gender = 'U'),
+    PRIMARY KEY (mgr_id)
+);
+
+CREATE TABLE Department (
+	dept_id INT UNSIGNED NOT NULL,
+    dept_name VARCHAR(30) NOT NULL,
+    mgr_id INT UNSIGNED NOT NULL,
+    mgr_start_date DATE NOT NULL,
+    PRIMARY KEY (dept_id),
+    FOREIGN KEY (mgr_id) REFERENCES Manager(mgr_id)
+);
+
+CREATE TABLE Employee (
+    emp_id INT UNSIGNED NOT NULL,
+    emp_fname VARCHAR(50) NOT NULL,
+    emp_lname VARCHAR(50) NOT NULL,
+    emp_bdate DATE NOT NULL,
+    emp_address TINYTEXT NOT NULL,
+    gender VARCHAR(1) CHECK (gender = 'M' OR gender = 'F' OR gender = 'U'),
+    dept_id INT UNSIGNED NOT NULL,
+    super_id INT UNSIGNED NOT NULL,
+    PRIMARY KEY (emp_id),
+	FOREIGN KEY (dept_id) REFERENCES Department(dept_id)    
+);
+
+CREATE TABLE Project(
+	proj_id INT UNSIGNED NOT NULL,
+    proj_name VARCHAR(30) NOT NULL,
+    proj_loc VARCHAR(50) NOT NULL DEFAULT 'company',
+    dept_id INT UNSIGNED NOT NULL,
+    PRIMARY KEY (proj_id),
+    FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+);
+
+CREATE TABLE Works_on(
+	proj_id INT UNSIGNED NOT NULL, 
+    emp_id INT UNSIGNED NOT NULL, 
+    role VARCHAR(30) NOT NULL,
+    hours INT UNSIGNED,
+    comments TINYTEXT,
+    salary_factory INT NOT NULL,
+    PRIMARY KEY (proj_id, emp_id),
+    FOREIGN KEY (proj_id) REFERENCES Project(proj_id),
+    FOREIGN KEY (emp_id) REFERENCES Employee(emp_id)
+);
+
+CREATE TABLE Salary(
+	emp_id INT UNSIGNED NOT NULL,
+    salary INT UNSIGNED NOT NULL,
+    start_date DATE NOT NULL,
+    PRIMARY KEY (emp_id)
+	
+);
