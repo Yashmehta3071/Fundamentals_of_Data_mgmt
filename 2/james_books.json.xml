@@ -1,0 +1,37 @@
+<james_books>
+	<book>
+		<name>Fifty shades of grey</name>
+		<author>E.L.James</author>
+		<date>May 2016</date>
+		<comment>did not like very much</comment>
+		<done>true</done>
+	</book>
+	<book>
+		<name>The grass in singing</name>
+		<author>Doris Lessing</author>
+		<date>June 2016</date>
+		<comment>enjoyed it quite a bit</comment>
+		<done>true</done>
+	</book>
+	<book>
+		<name>A short history of nearly everything</name>
+		<author>Bill Bryson</author>
+		<date>July 2016</date>
+		<comment>very informative</comment>
+		<done>true</done>
+	</book>
+	<book>
+		<name>JSON in 24 hours</name>
+		<author>Peter Settler</author>
+		<date>later this year</date>
+		<comment>for work</comment>
+		<done>true</done>
+	</book>
+	<book>
+		<name>Miss Smillas felling for snow</name>
+		<author>Peter Hong</author>
+		<date>later this year</date>
+		<comment>for entertainment</comment>
+		<done>true</done>
+	</book>
+</james_books>

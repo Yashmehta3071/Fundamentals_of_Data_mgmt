@@ -1,0 +1,41 @@
+{
+	"james_book": [{
+		"book": [{
+				"name": "Fifty shades of grey",
+				"author": "E.L.James",
+				"date": "May 2016",
+				"comment": "did not like very much",
+				"done": "true"
+			},
+			{
+				"name": "The grass in singing",
+				"author": "Doris Lessing",
+				"date": "June 2016",
+				"comment": "enjoyed it quite a bit",
+				"done": "true"
+			},
+			{
+				"name": "A short history of nearly everything",
+				"author": "Bill Bryson",
+				"date": "July 2016",
+				"comment": "very informative",
+				"done": "true"
+			},
+			{
+				"name": "JSON in 24 hours",
+				"author": "Peter Settler",
+				"date": "later this year",
+				"comment": "for work",
+				"done": "true"
+			},
+			{
+				"name": "Miss Smillas felling for snow",
+				"author": "Peter Hong",
+				"date": "later this year",
+				"comment": "for entertainment",
+				"done": "false"
+
+			}
+		]
+	}]
+}
